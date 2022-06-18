@@ -12,7 +12,6 @@
 * {
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 body {
   background: url(images/bg-intro-desktop.png);
@@ -22,41 +21,47 @@ body {
 }
 main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 10px 100px;
+  padding: 0px 80px 0px 80px;
   margin: auto;
   height: 100vh;
 }
 .intro {
-  color: #fff;
-  flex-basis: 40%;
-  padding: 2em;
-  border: solid;
+  color: antiquewhite;
+  width: 400px;
 }
 .intro p {
-  font-size: smaller;
+  font-size: 12px;
 }
 .container {
-  width: 400px;
+  width: 450px;
   padding: 2em;
-  border: solid;
 }
 .trial-btn {
   background-color: var(--Blue);
-  color: var(--GrayishBlue);
+  color: antiquewhite;
   width: 100%;
   padding: 15px 40px;
   border-radius: 5px;
+  border: none;
   margin-bottom: 2em;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgb(92, 91, 91);
+}
+.trial-btn span {
+  font-weight: bold;
+  color: #fff;
 }
 .wrapper {
   box-sizing: border-box;
-  padding: 40px;
+  padding: 25px 40px;
   width: 100%;
   background: #fff;
   border-radius: 10px;
   border: none;
+  box-shadow: 0px 4px 6px rgb(63, 62, 62);
 }
 .user-box {
   position: relative;
@@ -69,24 +74,62 @@ main {
   border-radius: 5px;
   margin: 8px 0;
   width: 100%;
+  font-family: var(--poppins);
+  color: var(--DarkBlue);
 }
-.submit{
+.entry:focus {
+  border: 2px solid var(--GrayishBlue);
+  outline: none;
+}
+.submit {
   text-align: center;
 }
-.submit input{
+.submit input {
   padding: 15px 40px;
   cursor: pointer;
   border-radius: 5px;
   background-color: var(--Green);
   color: #fff;
-  text-align: center;
   border: none;
   width: 100%;
 }
 .submit input:hover {
   background-color: hsl(154, 66%, 60%);
 }
-.wrapper p a{
+.wrapper p {
+  font-size: 10px;
+  padding: 10px;
+  color: var(--GrayishBlue);
+  text-align: center;
+}
+.wrapper p a {
   text-decoration: none;
   color: var(--Red);
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background: url(images/bg-intro-mobile.png);
+    background-color: var(--Red);
+  }
+  main {
+    flex-direction: column;
+    height: 50%;
+    padding: 25px 20px;
+  }
+  .intro {
+    color: antiquewhite;
+    width: 100%;
+    text-align: center;
+  }
+  .intro p {
+    font-size: 12px;
+  }
+  .container {
+    width: 100%;
+    padding: 2em;
+  }
+  .submit input {
+    padding: 15px 20px;
+  }
 }
