@@ -67,12 +67,45 @@ main {
   position: relative;
   height: auto;
 }
+/* .user-box[data-error] .entry {
+  border-color: var(--Red);
+  color: var(--Red);
+}
+.user-box[data-error]::after {
+  content: attr(data-error);
+  font-size: 0.6em;
+  font-style: italic;
+  float: right;
+  margin-bottom: 8px;
+  color: var(--Red);
+} */
+.user-box .data-error {
+  border-color: var(--Red);
+  color: var(--Red);
+  font-size: 0.6em;
+  font-style: italic;
+  float: right;
+  margin-bottom: 5px;
+  display: none;
+}
+.error-icon {
+  color: var(--Red);
+  position: absolute;
+  top: 30%;
+  left: 90%;
+  display: none;
+}
+.error-icon2,
+.error-icon3,
+.error-icon4 {
+  top: 50%;
+}
 .entry {
   box-sizing: border-box;
   padding: 12px 20px;
   border: 1px solid var(--GrayishBlue);
   border-radius: 5px;
-  margin: 8px 0;
+  margin: 10px 0;
   width: 100%;
   font-family: var(--poppins);
   color: var(--DarkBlue);

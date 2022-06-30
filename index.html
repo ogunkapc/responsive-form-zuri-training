@@ -11,6 +11,13 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <main>
@@ -30,16 +37,29 @@
           </button>
         </a>
         <div class="wrapper">
-          <form action="" class="form">
+          <form
+            action="./success.html"
+            method="post"
+            target="_blank"
+            name="form"
+            onsubmit="return validate()"
+            class="form"
+          >
             <div class="user-box">
               <input
                 type="text"
                 id="fname"
                 name="firstname"
                 placeholder="First Name"
-                required
+                autocomplete="off"
                 class="entry"
               />
+              <div class="error-icon" id="error_icon1">
+                <i class="fa-solid fa-circle-exclamation"></i>
+              </div>
+              <div class="data-error" id="fName_error">
+                Firstname cannot be empty
+              </div>
             </div>
             <div class="user-box">
               <input
@@ -47,9 +67,15 @@
                 id="lname"
                 name="lastname"
                 placeholder="Last Name"
-                required
+                autocomplete="off"
                 class="entry"
               />
+              <div class="error-icon" id="error_icon2">
+                <i class="fa-solid fa-circle-exclamation"></i>
+              </div>
+              <div class="data-error" id="lName_error">
+                Lastname cannot be empty
+              </div>
             </div>
             <div class="user-box">
               <input
@@ -57,9 +83,15 @@
                 id="email"
                 name="email"
                 placeholder="Email Address"
-                required
+                autocomplete="off"
                 class="entry"
               />
+              <div class="error-icon" id="error_icon3">
+                <i class="fa-solid fa-circle-exclamation"></i>
+              </div>
+              <div class="data-error" id="email_error">
+                Looks like this is not an email
+              </div>
             </div>
             <div class="user-box">
               <input
@@ -67,9 +99,14 @@
                 id="password"
                 name="password"
                 placeholder="Password"
-                required
                 class="entry"
               />
+              <div class="error-icon" id="error_icon4">
+                <i class="fa-solid fa-circle-exclamation"></i>
+              </div>
+              <div class="data-error" id="password_error">
+                Password cannot be empty
+              </div>
             </div>
             <div class="submit">
               <input type="submit" value="CLAIM YOUR FREE TRIAL" />
@@ -82,5 +119,6 @@
         </div>
       </div>
     </main>
+    <script src="validate.js"></script>
   </body>
 </html>
